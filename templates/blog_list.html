@@ -1,1 +1,9 @@
-Hola este es mi blog!!
+Blog list
+<br>
+{%for post in posts%}
+<br>
+<a href="{% url "blog:detail" post.id %}">{{post.title}}</a>
+<br>
+{%endfor%}
+<br>
+<a href="{% url "blog:create" %}">Create</a>
